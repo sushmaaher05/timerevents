@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+</head>
+<script>
+     
+     function Level1(){
+        document.querySelector("p").innerHTML = "volume Increased : 10%";
+     }
+     function Level2(){
+        document.querySelector("p").innerHTML = "volume Increased : 60%";
+     }
+     function Level3(){
+        document.querySelector("p").innerHTML = "volume Full ";
+     }
+
+     let l1, l2, l3;
+
+     function VolumeIncreased(){
+        l1 = setTimeout(Level1, 4000);
+        l2 = setTimeout(Level2, 8000);
+        l3 = setTimeout(Level3, 15000);
+     }
+
+     function CancelClick(){
+         clearTimeout(l2)
+     }
+      
+
+</script>
+<body>
+<button onclick="VolumeIncreased()"  class="bi bi-volume-up-fill"></button>
+<button onclick="CancelClick()">Cancel L2</button>
+<p></p>
+    
+</body>
+</html>
